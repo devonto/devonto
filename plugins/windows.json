@@ -1,0 +1,27 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "org.apache.cordova.network-information": {
+            "PACKAGE_NAME": "Devonto"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "Devonto"
+        },
+        "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "Devonto"
+        },
+        "org.apache.cordova.vibration": {
+            "PACKAGE_NAME": "Devonto"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "Devonto"
+        }
+    },
+    "dependent_plugins": {}
+}

@@ -1,0 +1,138 @@
+﻿/*
+Originally hard-coded, now using BuildTool's config to customise per app
+body{
+	background: rgb(229,101,55);
+	background: -moz-linear-gradient(top,  rgba(229,101,55,1) 0%, rgba(253,110,59,1) 50%, rgba(229,101,55,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(229,101,55,1)), color-stop(50%,rgba(253,110,59,1)), color-stop(100%,rgba(229,101,55,1)));
+	background: -webkit-linear-gradient(top,  rgba(229,101,55,1) 0%,rgba(253,110,59,1) 50%,rgba(229,101,55,1) 100%);
+	background: -o-linear-gradient(top,  rgba(229,101,55,1) 0%,rgba(253,110,59,1) 50%,rgba(229,101,55,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(229,101,55,1) 0%,rgba(253,110,59,1) 50%,rgba(229,101,55,1) 100%);
+	background: linear-gradient(to bottom,  rgba(229,101,55,1) 0%,rgba(253,110,59,1) 50%,rgba(229,101,55,1) 100%);
+	filter: 	progid:DXImageTransform.Microsoft.gradient( startColorstr='#e56537', endColorstr='#e56537',GradientType=0 );
+	
+	color:#FFF;
+}
+
+.button{
+    color:#FFFFFF;
+	background-color:#0055a5;
+	border-color: #0055a5;
+}
+
+.button:active, .button:focus{
+	border-color: #0055a5;
+}
+
+a{
+	color:#FFF;
+}
+*/
+
+
+/* Standard Styles */
+@media screen and (orientation: portrait) {
+	@-ms-viewport {
+		width: 320px;
+	}
+}
+	
+@media screen and (orientation: landscape) {
+	@-ms-viewport {
+		width: 800px;
+	}
+}
+
+* {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+ 	-webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:1.2em;
+    padding:0;
+	margin:0;
+    width:100%;
+	height:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    width:80%;                   /* text area width */
+    text-align:center;
+    margin:20% auto 0;
+}
+
+.app img{
+	width:90%;
+	margin:0 0 5% 0;
+}
+
+.table{
+	display:table-cell;
+}
+
+h1 {
+    font-size:2em;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-transform:uppercase;
+	color:#000;
+}
+
+.button {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    padding:10px 20px;
+	display:inline-block;
+	text-decoration:none;
+	cursor:pointer;
+	background-color:#eaeaea;
+	color:#FFF;
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+#offline, #relaunch{
+	display:none
+}
+
+.button.active{
+	margin-top:2px;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+
+    .app img{
+		margin:0 5% 0 0;
+		max-width:49%;
+		vertical-align:middle;
+    }
+	#content{
+		width:45%;
+		display:inline-block;
+		vertical-align:middle;
+	}
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}

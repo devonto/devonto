@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+        xmlns:gap	= "http://phonegap.com/ns/1.0"
+        id			= "com.devonto.webapp"
+		versionCode	= "1"
+        version		= "1.0"
+        android-versionCode = "1">
+
+    <name>Devonto Web App</name>
+
+    <description>
+        Devonto Web Design - Mobile website app viewer
+    </description>
+
+    <author href="http://www.devonto.com" email="enquiries@devonto.com">
+        Devonto Ltd
+    </author>
+
+	<gap:plugin name="org.apache.cordova.network-information" />
+	<gap:plugin name="org.apache.cordova.dialogs" />
+	<gap:plugin name="org.apache.cordova.splashscreen" />
+	<gap:plugin name="org.apache.cordova.vibration" />
+	<gap:plugin name="org.apache.cordova.inappbrowser" />
+	
+	<preference name="phonegap-version" value="4.2"/>
+	<preference name="orientation" value="default"/>
+	<preference name="target-device" value="universal"/>
+	<preference name="fullscreen" value="true"/>
+	<preference name="webviewbounce" value="false"/>
+	<preference name="prerendered-icon" value="true"/>
+	<preference name="stay-in-webview" value="false"/>
+	<preference name="ios-statusbarstyle" value="black-opaque"/>
+	<preference name="detect-data-types" value="true"/>
+	<preference name="exit-on-suspend" value="false"/>
+	<preference name="show-splash-screen-spinner" value="false"/>
+	<preference name="SplashScreenDelay" value="5000"/>
+	<preference name="disable-cursor" value="false"/>
+	<preference name="android-minSdkVersion" value="14"/>
+	<preference name="android-installLocation" value="auto"/>
+	<preference name="AutoHideSplashScreen" value="true" />
+	
+	<access origin="http://devonto.com" subdomains="true" />
+	
+	<option name="webview_url" required="true" type="textfield" value="http://www.devonto.com" tooltip="The URL to load"/>
+	<option name="gradient_start" required="true" type="textfield" value="rgba(229,101,55,1)" tooltip="RGB of starting gradient colour" />
+	<option name="gradient_stop" required="true" type="textfield" value="rgba(229,101,55,1)" tooltip="RGB of ending gradient colour" />
+	<option name="font_color" required="true" type="textfield" value="#FFFFFF" tooltip="Colour of the main content font" />
+	<option name="button_background" required="true" type="textfield" value="#0055a5" tooltip="Background colour for button" />
+	<option name="button_font" required="true" type="textfield" value="#FFFFFF" tooltip="Text colour for button" />
+	<option name="title" required="true" type="textfield" value="Web App" tooltip="Title to show on main page" />
+	
+	<preference name="permissions" value="none"/>
+
+    <!-- to enable individual permissions -->
+    <feature name="http://api.phonegap.com/1.0/device"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    <feature name="http://api.phonegap.com/1.0/notification"/>
+	
+</widget>
